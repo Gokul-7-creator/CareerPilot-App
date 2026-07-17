@@ -51,7 +51,7 @@ from ml.cover_letter import generate_cover_letter
 st.set_page_config(
     page_title="CareerPilot",
    
-    layout="wide"
+    layout="wide",
     initial_sidebar_state="expanded"
 )
 st.markdown("""
@@ -75,10 +75,7 @@ st.markdown("""
 }
 
 /* Sidebar */
-section[data-testid="stSidebar"]{
-    background:#0F172A;
-    border-right:1px solid #1E293B;
-}
+
 
 /* Titles */
 h1{
@@ -237,13 +234,31 @@ st.markdown("""
 <style>
 
 /* Increase sidebar width */
+st.markdown("""
+<style>
+
+/* Sidebar */
 [data-testid="stSidebar"]{
-    min-width:320px;
-    max-width:320px;
+    min-width:320px !important;
+    max-width:320px !important;
+    background:#0F172A;
+}
+
+/* Hide the collapse button (>>) */
+[data-testid="collapsedControl"]{
+    display:none !important;
+}
+
+/* Use full page width */
+.block-container{
+    max-width:100% !important;
+    padding:2rem 3rem !important;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
+
 
 
    
