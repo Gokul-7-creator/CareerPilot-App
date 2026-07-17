@@ -1,0 +1,23 @@
+AI Engineer
+
+Responsibilities:
+- Build AI and Machine Learning applications.
+- Develop NLP and Computer Vision solutions.
+- Deploy AI models to production.
+- Work with Python and Deep Learning frameworks.
+- Optimize model performance.
+- Collaborate with software engineers.
+
+Required Skills:
+- Python
+- Machine Learning
+- Deep Learning
+- TensorFlow
+- PyTorch
+- Scikit-learn
+- NLP
+- Computer Vision
+- SQL
+- Git
+- Data Structures
+- Algorithms

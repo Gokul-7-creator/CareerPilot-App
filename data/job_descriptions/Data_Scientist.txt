@@ -1,0 +1,20 @@
+Data Scientist
+
+Responsibilities:
+- Analyze large datasets.
+- Build predictive models.
+- Create dashboards.
+- Perform statistical analysis.
+- Communicate business insights.
+
+Required Skills:
+- Python
+- Pandas
+- NumPy
+- SQL
+- Machine Learning
+- Statistics
+- Power BI
+- Tableau
+- Scikit-learn
+- Data Visualization

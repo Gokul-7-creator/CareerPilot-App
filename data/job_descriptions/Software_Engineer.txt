@@ -1,0 +1,20 @@
+Software Engineer
+
+Responsibilities:
+- Develop software applications.
+- Write clean and maintainable code.
+- Debug and test software.
+- Work with APIs.
+- Collaborate with teams.
+
+Required Skills:
+- Python
+- Java
+- C++
+- Data Structures
+- Algorithms
+- OOP
+- Git
+- SQL
+- REST API
+- Problem Solving
