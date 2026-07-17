@@ -52,6 +52,7 @@ st.set_page_config(
     page_title="CareerPilot",
    
     layout="wide"
+    initial_sidebar_state="expanded"
 )
 st.markdown("""
 <style>
