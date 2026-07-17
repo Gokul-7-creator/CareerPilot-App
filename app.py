@@ -246,11 +246,11 @@ st.markdown("""
 
 /* Main page */
 .block-container{
-    max-width:100% !important;
-    width:100% !important;
-    padding:2rem 3rem !important;
+    max-width:1200px;
+    margin:auto;
+    padding-top:2rem;
+    padding-bottom:2rem;
 }
-
 </style>
 """, unsafe_allow_html=True)
 
