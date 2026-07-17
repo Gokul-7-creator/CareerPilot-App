@@ -142,21 +142,15 @@ st.markdown("""
 <style>
 
 /* Sidebar */
-[data-testid="stSidebar"]{
-    min-width:320px !important;
-    max-width:320px !important;
-    background:#0F172A !important;
-}
+
 
 /* Hide collapse button */
 
 
 /* Main page */
 .block-container{
-    padding-top:2rem !important;
-    padding-bottom:2rem !important;
-    padding-left:3rem !important;
-    padding-right:3rem !important;
+    padding-top:2rem;
+    padding-bottom:2rem;
 }
 </style>
 """, unsafe_allow_html=True)
