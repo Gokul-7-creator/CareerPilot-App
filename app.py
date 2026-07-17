@@ -57,120 +57,51 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* ===============================
-   CareerPilot Premium Theme
-================================ */
-
 /* Entire App */
 .stApp{
     background: linear-gradient(135deg,#0B1220 0%, #111827 45%, #1E1B4B 100%);
     color:#F8FAFC;
 }
 
-/* Main Container */
+/* Main container */
 .block-container{
-    max-width:100% !important;
-    width:100% !important;
-    padding:2rem 3rem !important;
+    width:100%;
+    max-width:none !important;
+    padding-top:2rem;
+    padding-bottom:2rem;
+    padding-left:5%;
+    padding-right:5%;
 }
 
 /* Sidebar */
-
-
-/* Titles */
-h1{
-    font-size:58px !important;
-    font-weight:800 !important;
-    color:#FFFFFF;
-}
-
-h2,h3{
-    color:#E2E8F0;
-}
-
-/* Tabs */
-.stTabs [data-baseweb="tab"]{
-    background:#1E293B;
-    color:#CBD5E1;
-    border-radius:12px;
-    padding:12px 22px;
-    font-weight:600;
-}
-
-.stTabs [aria-selected="true"]{
-    background:linear-gradient(90deg,#2563EB,#38BDF8);
-    color:white;
+section[data-testid="stSidebar"]{
+    background:#0F172A;
+    width:320px !important;
 }
 
 /* Buttons */
 .stButton>button{
     width:100%;
-    height:55px;
-    border:none;
     border-radius:15px;
+    height:55px;
+    font-weight:bold;
     background:linear-gradient(90deg,#2563EB,#38BDF8);
     color:white;
-    font-size:17px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.stButton>button:hover{
-    transform:translateY(-2px);
-    box-shadow:0px 0px 20px rgba(56,189,248,.4);
 }
 
 /* Metric Cards */
 div[data-testid="stMetric"]{
     background:#1E293B;
-    border:1px solid #334155;
     border-radius:18px;
     padding:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.35);
 }
 
 /* Upload Box */
 section[data-testid="stFileUploader"]{
     border:2px dashed #38BDF8;
     border-radius:18px;
-    background:#111827;
     padding:20px;
 }
-
-/* Select Box */
-div[data-baseweb="select"]{
-    border-radius:15px;
-}
-
-/* Text Area */
-textarea{
-    border-radius:15px !important;
-}
-
-/* Progress Bar */
-.stProgress > div > div{
-    background:linear-gradient(90deg,#2563EB,#38BDF8);
-}
-
-/* Success */
-.stSuccess{
-    border-radius:15px;
-}
-
-/* Warning */
-.stWarning{
-    border-radius:15px;
-}
-
-/* Error */
-.stError{
-    border-radius:15px;
-}
-
-</style>
-""", unsafe_allow_html=True)
-st.markdown("""
-<style>
 
 /* Animated Background */
 
@@ -205,30 +136,18 @@ z-index:-1;
 }
 
 @keyframes move1{
-
-0%{
-transform:translate(0px,0px);
-}
-
-100%{
-transform:translate(250px,180px);
-}
-
+0%{transform:translate(0,0);}
+100%{transform:translate(250px,180px);}
 }
 
 @keyframes move2{
-
-0%{
-transform:translate(0px,0px);
+0%{transform:translate(0,0);}
+100%{transform:translate(-220px,-180px);}
 }
 
-100%{
-transform:translate(-220px,-180px);
-}
-
-}
 </style>
 """, unsafe_allow_html=True)
+
 st.markdown("""
 <style>
 
@@ -246,10 +165,10 @@ st.markdown("""
 
 /* Main page */
 .block-container{
-    max-width:1200px;
-    margin:auto;
-    padding-top:2rem;
-    padding-bottom:2rem;
+    max-width:none !important;
+    width:100% !important;
+    padding:2rem 5% !important;
+
 }
 </style>
 """, unsafe_allow_html=True)
@@ -400,35 +319,27 @@ st.markdown("---")
 
 if st.session_state.current_page == "home":
 
-    left, center, right = st.columns([1, 2, 1])
+    st.markdown("## 📄 Upload Resume")
 
-    with center:
+    uploaded_resume = st.file_uploader(
+        "Choose your Resume (PDF)",
+        type=["pdf"]
+    )
 
-        
-        st.markdown("## 📄 Upload Resume")
-
-        uploaded_resume = st.file_uploader(
-            "Choose your Resume (PDF)",
-            type=["pdf"]
-        )
-
-
-        job_role = st.text_input(
+    job_role = st.text_input(
         "🎯 Target Job Role",
         placeholder="Example: AI Engineer, DevOps Engineer, Cyber Security Analyst"
-        )
-        company = st.text_input(
-            "🏢 Company Name",
-            placeholder="e.g. Google, Microsoft, TCS"
-        )
+    )
 
+    company = st.text_input(
+        "🏢 Company Name",
+        placeholder="e.g. Google, Microsoft, TCS"
+    )
 
-        analyze = st.button(
-            "🚀 Analyze Resume",
-            use_container_width=True
-        )
-        
-
+    analyze = st.button(
+        "🚀 Analyze Resume",
+        use_container_width=True
+    )
 # -------------------------------------------------
 # Analyze Resume
 # -------------------------------------------------
