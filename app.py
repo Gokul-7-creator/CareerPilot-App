@@ -68,12 +68,9 @@ st.markdown("""
 
 /* Main Container */
 .block-container{
-    max-width:1200px;
-    margin:auto;
-    padding-top:2rem;
-    padding-bottom:2rem;
-    padding-left:2rem;
-    padding-right:2rem;
+    max-width:100% !important;
+    width:100% !important;
+    padding:2rem 3rem !important;
 }
 
 /* Sidebar */
