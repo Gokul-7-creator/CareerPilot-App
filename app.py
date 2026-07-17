@@ -287,8 +287,15 @@ for key, value in defaults.items():
 with st.sidebar:
 
     st.markdown("""
-    <h1 style="text-align:center;color:#38BDF8;">
-    CareerPilot
+    <h1 style="
+    text-align:center;
+    color:#38BDF8;
+    font-size:34px;
+    font-weight:800;
+    white-space:nowrap;
+    overflow:hidden;
+    ">
+    🚀 CareerPilot
     </h1>
     """, unsafe_allow_html=True)
 
