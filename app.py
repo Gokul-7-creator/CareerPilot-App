@@ -64,20 +64,10 @@ st.markdown("""
 }
 
 /* Main container */
-.block-container{
-    width:100%;
-    max-width:none !important;
-    padding-top:2rem;
-    padding-bottom:2rem;
-    padding-left:5%;
-    padding-right:5%;
-}
+
 
 /* Sidebar */
-section[data-testid="stSidebar"]{
-    background:#0F172A;
-    width:320px !important;
-}
+
 
 /* Buttons */
 .stButton>button{
@@ -159,16 +149,14 @@ st.markdown("""
 }
 
 /* Hide collapse button */
-[data-testid="collapsedControl"]{
-    display:none !important;
-}
+
 
 /* Main page */
 .block-container{
-    max-width:none !important;
-    width:100% !important;
-    padding:2rem 5% !important;
-
+    padding-top:2rem !important;
+    padding-bottom:2rem !important;
+    padding-left:3rem !important;
+    padding-right:3rem !important;
 }
 </style>
 """, unsafe_allow_html=True)
