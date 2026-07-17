@@ -227,6 +227,8 @@ transform:translate(-220px,-180px);
 }
 
 }
+</style>
+""", unsafe_allow_html=True)
 st.markdown("""
 <style>
 
