@@ -227,13 +227,6 @@ transform:translate(-220px,-180px);
 }
 
 }
-
-</style>
-""", unsafe_allow_html=True)
-st.markdown("""
-<style>
-
-/* Increase sidebar width */
 st.markdown("""
 <style>
 
@@ -241,22 +234,24 @@ st.markdown("""
 [data-testid="stSidebar"]{
     min-width:320px !important;
     max-width:320px !important;
-    background:#0F172A;
+    background:#0F172A !important;
 }
 
-/* Hide the collapse button (>>) */
+/* Hide collapse button */
 [data-testid="collapsedControl"]{
     display:none !important;
 }
 
-/* Use full page width */
+/* Main page */
 .block-container{
     max-width:100% !important;
+    width:100% !important;
     padding:2rem 3rem !important;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
