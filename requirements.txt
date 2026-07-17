@@ -1,10 +1,15 @@
 streamlit
+groq
+python-dotenv
 pymupdf
 spacy
-python-dotenv
 langchain
 langchain-community
 faiss-cpu
 sentence-transformers
 google-genai
 numpy
+reportlab
+scikit-learn
+PyPDF2
+requests
