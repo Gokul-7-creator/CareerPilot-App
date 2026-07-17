@@ -299,16 +299,16 @@ for key, value in defaults.items():
 with st.sidebar:
 
     st.markdown("""
-    <h1 style="
-    text-align:center;
-    color:#38BDF8;
-    font-size:34px;
-    font-weight:800;
-    white-space:nowrap;
-    overflow:hidden;
-    ">
-    🚀 CareerPilot
-    </h1>
+    <div style="text-align:center;padding:10px 0;">
+        <h2 style="
+            color:#38BDF8;
+            font-size:28px;
+            font-weight:800;
+            margin:0;
+        ">
+            🚀 CareerPilot
+        </h2>
+    </div>
     """, unsafe_allow_html=True)
 
     st.image(
