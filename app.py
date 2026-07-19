@@ -21,7 +21,6 @@ from utils.resume_parser import (
 )
 from utils.pdf_report import generate_pdf
 from ui.chatbot import render_chatbot
-from ui.company_compare import render_company_compare
 
 # -------------------------------
 # RAG
@@ -243,7 +242,6 @@ with st.sidebar:
         "🎤 Mock Interview",
         "📈 Career Roadmap",
         "📝 Cover Letter",
-        "🏢 Company Compare",
         "💬 AI Assistant",
         "📥 PDF Report"
     ]
@@ -504,7 +502,6 @@ if st.session_state.analysis_done:
             "🎤 Interview",
             "🚀 Career",
             "📝 Cover Letter",
-            "🏢 Company Compare",
             "💬 AI Assistant",
             "📥 Download"
         ]
@@ -520,8 +517,7 @@ if st.session_state.analysis_done:
 
     elif page == "📝 Cover Letter":
         render_cover_letter(job_role)
-    elif page == "🏢 Company Compare":
-        render_company_compare()
+
     elif page == "💬 AI Assistant":
         render_chatbot()
 
