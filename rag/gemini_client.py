@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from groq import Groq
+from groq import RateLimitError
 
 load_dotenv()
 
@@ -13,19 +14,25 @@ client = Groq(
 # ---------------------------------------
 
 def ask_ai(prompt):
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=0.3
+        )
 
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        temperature=0.3
-    )
+        return response.choices[0].message.content
 
-    return response.choices[0].message.content
+    except RateLimitError as e:
+        print("========== GROQ RATE LIMIT ==========")
+        print(e)
+        print("=====================================")
+        raise
 
 
 # ---------------------------------------
