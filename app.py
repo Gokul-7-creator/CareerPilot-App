@@ -363,10 +363,7 @@ if st.session_state.current_page == "home" and analyze:
 
     # Retrieve Job Description
     
-    job_description = generate_job_description(
-        job_role,
-        company
-    )
+    
   
     match_score = calculate_match(
         resume_text,
