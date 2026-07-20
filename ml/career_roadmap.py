@@ -1,11 +1,12 @@
 import os
 from dotenv import load_dotenv
-from groq import Groq
+from openai import OpenAI
 
 load_dotenv()
 
-client = Groq(
-    api_key=os.getenv("GROQ_API_KEY")
+client = OpenAI(
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url="https://openrouter.ai/api/v1"
 )
 
 def generate_career_roadmap(resume_text, job_role):
@@ -34,7 +35,7 @@ Use proper headings and bullet points.
 """
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="meta-llama/llama-3.1-8b-instruct",
         messages=[
             {
                 "role": "user",

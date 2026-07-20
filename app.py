@@ -526,7 +526,7 @@ if st.session_state.analysis_done:
     <div style="text-align:center;color:#94A3B8;">
 
 
-    <b>Streamlit • Groq AI • RAG • Python</b>
+    <b>Streamlit • Open AI • RAG • Python</b>
 
     <br><br>
 

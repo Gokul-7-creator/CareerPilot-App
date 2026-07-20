@@ -1,14 +1,16 @@
 import os
 from dotenv import load_dotenv
-from groq import Groq
-from groq import RateLimitError
+from openai import OpenAI
+from openai import RateLimitError
+print("RUNNING FILE:", __file__)
+print("OPENROUTER KEY:", os.getenv("OPENROUTER_API_KEY"))
 
 load_dotenv()
 
-client = Groq(
-    api_key=os.getenv("GROQ_API_KEY")
+client = OpenAI(
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url="https://openrouter.ai/api/v1"
 )
-
 # ---------------------------------------
 # Generic AI Prompt
 # ---------------------------------------
@@ -16,7 +18,7 @@ client = Groq(
 def ask_ai(prompt):
     try:
         response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model="meta-llama/llama-3.1-8b-instruct",
             messages=[
                 {
                     "role": "user",
@@ -29,7 +31,7 @@ def ask_ai(prompt):
         return response.choices[0].message.content
 
     except RateLimitError as e:
-        print("========== GROQ RATE LIMIT ==========")
+        print("========== OPENROUTER RATE LIMIT ==========")
         print(e)
         print("=====================================")
         raise
@@ -80,7 +82,7 @@ Do not say "It looks like you didn't type anything."
 Analyze only the information provided.
 """
 
-    print("========== PROMPT SENT TO GROQ ==========")
+    print("========== PROMPT SENT TO OPENROUTER ==========")
     print(prompt)
     print("=========================================")
 
